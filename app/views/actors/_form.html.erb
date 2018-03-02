@@ -1,0 +1,57 @@
+<%= form_with(model: actor, local: true) do |form| %>
+  <% if actor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(actor.errors.count, "error") %> prohibited this actor from being saved:</h2>
+
+      <ul>
+      <% actor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :actor_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :today %>
+    <%= form.date_select :today_date, id: :actor_today_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_movies %>
+    <%= form.number_field :total_movies, id: :actor_total_movies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :super_hit_movies %>
+    <%= form.number_field :super_hit_movies, id: :actor_super_hit_movies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :meduim %>
+    <%= form.number_field :meduim, id: :actor_meduim %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average %>
+    <%= form.number_field :average, id: :actor_average %>
+  </div>
+
+  <div class="field">
+    <%= form.label :below_average %>
+    <%= form.text_field :below_average, id: :actor_below_average %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flop_movie %>
+    <%= form.number_field :flop_movie, id: :actor_flop_movie %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

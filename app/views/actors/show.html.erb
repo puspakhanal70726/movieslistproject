@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @actor.name %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @actor.birthday %>
+</p>
+
+<p>
+  <strong>Total movies:</strong>
+  <%= @actor.total_movies %>
+</p>
+
+<p>
+  <strong>Super hit movies:</strong>
+  <%= @actor.super_hit_movies %>
+</p>
+
+<p>
+  <strong>Meduim:</strong>
+  <%= @actor.meduim %>
+</p>
+
+<p>
+  <strong>Average:</strong>
+  <%= @actor.average %>
+</p>
+
+<p>
+  <strong>Below average:</strong>
+  <%= @actor.below_average %>
+</p>
+
+<p>
+  <strong>Flop movie:</strong>
+  <%= @actor.flop_movie %>
+</p>
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

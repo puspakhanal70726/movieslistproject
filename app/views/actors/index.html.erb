@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Create Actors List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name  |</th>
+      <th>Birthday |</th>
+      <th>Total movies |</th>
+      <th>Super hit movies |</th>
+      <th>Meduim  |</th>
+      <th>Average  |</th>
+      <th>Below average  |</th>
+      <th>Flop movie  |</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actors.each do |actor| %>
+      <tr>
+        <td><%= actor.name %></td>
+        <td><%= actor.birthday %></td>
+        <td><%= actor.total_movies %></td>
+        <td><%= actor.super_hit_movies %></td>
+        <td><%= actor.meduim %></td>
+        <td><%= actor.average %></td>
+        <td><%= actor.below_average %></td>
+        <td><%= actor.flop_movie %></td>
+        <td><%= link_to 'Show', actor %></td>
+        <td><%= link_to 'Edit', edit_actor_path(actor) %></td>
+        <td><%= link_to 'Destroy', actor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Actor', new_actor_path %>
